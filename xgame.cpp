@@ -3,22 +3,15 @@
 
 #include "pattern.h"
 
-class A
+class KG_Example// : private xzero::KG_UnConstructable
 {
-    //KG_SINGLETON_DECLARE(A);
-
-public:
-    int a;
+    KG_SINGLETON_DCL_STRICT(KG_Example)
 };
 
 int main()
 {
-    A &r = KG_SINGLETON_REF(A);
-    r.a = 1;
-
-    A *p = KG_SINGLETON_PTR(A);
-    printf("%d", p->a);
-
+    KG_Example &r = KG_SINGLETON_REF(KG_Example);
+    KG_Example *p = KG_SINGLETON_PTR(KG_Example);
     return 0;
 }
 
