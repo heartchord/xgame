@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "list.h"
 #include "pattern.h"
 
 class KG_Example// : private xzero::KG_UnConstructable
@@ -10,6 +11,7 @@ class KG_Example// : private xzero::KG_UnConstructable
 
 int main()
 {
+    KG_InterlockedListHead h;
     KG_Example &r = KG_SINGLETON_REF(KG_Example);
     KG_Example *p = KG_SINGLETON_PTR(KG_Example);
     return 0;
