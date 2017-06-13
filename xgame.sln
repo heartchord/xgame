@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xzero", "..\xzero\xzero.vcxproj", "{D2BF3E83-BC74-4434-855D-F9201EDC8BDE}"
 EndProject
@@ -10,6 +10,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xnet", "..\xnet\xnet.vcxproj", "{85A0EC8D-9DFD-43BD-AC33-94683314E0CE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xgame", "xgame.vcxproj", "{D1333730-83B5-4778-B942-9E7B5634DEA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2BF3E83-BC74-4434-855D-F9201EDC8BDE} = {D2BF3E83-BC74-4434-855D-F9201EDC8BDE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

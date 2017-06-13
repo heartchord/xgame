@@ -2,22 +2,22 @@
 #include <stdlib.h>
 
 #include "list.h"
+using namespace xzero;
 
 int main()
 {
-    xzero::PKG_InterlockedListHead pHead = xzero::KG_InterlockedList::Initialize();
+    PKG_InterlockedListHead pHead = KG_InitializeInterlockedList();
 
     for (auto i = 0; i < 10; i++)
     {
-        xzero::PKG_InterlockedListNode pNode = new xzero::KG_InterlockedListNode();
-        xzero::KG_InterlockedList::KG_PushNode(pHead, pNode);
+        KG_PushNodeToInterlockedList(pHead, new KG_InterlockedListNode());
     }
     
     printf("%d, %d\n", pHead->m_nLength, pHead->m_nOpTimes);
 
     for (auto i = 0; i < 5; i++)
     {
-        auto p = xzero::KG_InterlockedList::KG_PopNode(pHead);
+        auto p = KG_PopNodeFromInterlockedList(pHead);
         delete p;
     }
 
@@ -25,7 +25,7 @@ int main()
 
     for (auto i = 0; i < 5; i++)
     {
-        auto p = xzero::KG_InterlockedList::KG_PopNode(pHead);
+        auto p = KG_PopNodeFromInterlockedList(pHead);
         delete p;
     }
 
@@ -33,4 +33,3 @@ int main()
 
     return 0;
 }
-
