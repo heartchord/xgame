@@ -93,22 +93,36 @@ int f()
     return 1;
 }
 
+//int main()
+//{
+//    xzero::KG_GlobalMemLeakDetect det;
+//
+//    new int(1);
+//
+//    xzero::KG_Delegate<void, int> d;
+//    A a;
+//    B b;
+//    C c;
+//
+//    d += new xzero::KG_Function<A, void, int>(&a, &A::f);
+//    d += new xzero::KG_Function<B, void, int>(&b, &B::f);
+//    d += new xzero::KG_Function<B, void, int>(&c, &B::f); // ∂‡Ã¨
+//    d += new xzero::KG_Function<void, void, int>(&f);
+//
+//    d();
+//    return 0;
+//}
+
 int main()
 {
-    xzero::KG_GlobalMemLeakDetect det;
+    xnet::KG_SingleClientServerProxy *pProxy = ::new xnet::KG_SingleClientServerProxy;
+    pProxy->Init("", 8888);
+    xnet::SPIKG_ServerProxy spProxy = xnet::SPIKG_ServerProxy(pProxy);
 
-    new int(1);
+    for (;;)
+    {
+        spProxy->Activate();
+    }
 
-    xzero::KG_Delegate<void, int> d;
-    A a;
-    B b;
-    C c;
-
-    d += new xzero::KG_Function<A, void, int>(&a, &A::f);
-    d += new xzero::KG_Function<B, void, int>(&b, &B::f);
-    d += new xzero::KG_Function<B, void, int>(&c, &B::f); // ∂‡Ã¨
-    d += new xzero::KG_Function<void, void, int>(&f);
-
-    d();
     return 0;
 }
