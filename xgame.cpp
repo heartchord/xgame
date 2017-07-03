@@ -115,7 +115,7 @@ int f()
 
 int main()
 {
-    xnet::KG_SingleClientServerProxy *pProxy = ::new xnet::KG_SingleClientServerProxy;
+    xnet::KG_MultiClientServerProxy *pProxy = ::new xnet::KG_MultiClientServerProxy;
     pProxy->Init("", 8888);
     xnet::SPIKG_ServerProxy spProxy = xnet::SPIKG_ServerProxy(pProxy);
 
