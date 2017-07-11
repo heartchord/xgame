@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xzero", "..\xzero\xzero.vcxproj", "{D2BF3E83-BC74-4434-855D-F9201EDC8BDE}"
 EndProject
@@ -16,10 +16,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xgame", "xgame.vcxproj", "{
 		{85A0EC8D-9DFD-43BD-AC33-94683314E0CE} = {85A0EC8D-9DFD-43BD-AC33-94683314E0CE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xzero_benchmark", "..\xzero_test\xzero_benchmark.vcxproj", "{B54BA78F-839B-4BDE-8E97-9BA583A30D8E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D2BF3E83-BC74-4434-855D-F9201EDC8BDE} = {D2BF3E83-BC74-4434-855D-F9201EDC8BDE}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xzero_test", "..\xzero_test\test\xzero_test.vcxproj", "{5EA52AEC-F2C0-4A18-9009-93723FD0F759}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xzero_benchmark", "..\xzero_test\benchmark\xzero_benchmark.vcxproj", "{B54BA78F-839B-4BDE-8E97-9BA583A30D8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +60,14 @@ Global
 		{D1333730-83B5-4778-B942-9E7B5634DEA6}.Release|x64.Build.0 = Release|x64
 		{D1333730-83B5-4778-B942-9E7B5634DEA6}.Release|x86.ActiveCfg = Release|Win32
 		{D1333730-83B5-4778-B942-9E7B5634DEA6}.Release|x86.Build.0 = Release|Win32
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Debug|x64.ActiveCfg = Debug|x64
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Debug|x64.Build.0 = Debug|x64
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Debug|x86.ActiveCfg = Debug|Win32
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Debug|x86.Build.0 = Debug|Win32
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Release|x64.ActiveCfg = Release|x64
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Release|x64.Build.0 = Release|x64
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Release|x86.ActiveCfg = Release|Win32
+		{5EA52AEC-F2C0-4A18-9009-93723FD0F759}.Release|x86.Build.0 = Release|Win32
 		{B54BA78F-839B-4BDE-8E97-9BA583A30D8E}.Debug|x64.ActiveCfg = Debug|x64
 		{B54BA78F-839B-4BDE-8E97-9BA583A30D8E}.Debug|x64.Build.0 = Debug|x64
 		{B54BA78F-839B-4BDE-8E97-9BA583A30D8E}.Debug|x86.ActiveCfg = Debug|Win32
