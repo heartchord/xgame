@@ -115,14 +115,17 @@ int f()
 
 int main()
 {
-    xnet::KG_MultiClientServerProxy *pProxy = ::new xnet::KG_MultiClientServerProxy;
-    pProxy->Init("", 8888);
-    xnet::SPIKG_ServerProxy spProxy = xnet::SPIKG_ServerProxy(pProxy);
+    //xnet::KG_MultiClientServerProxy *pProxy = ::new xnet::KG_MultiClientServerProxy;
+    //pProxy->Init("", 8888);
+    //xnet::SPIKG_ServerProxy spProxy = xnet::SPIKG_ServerProxy(pProxy);
 
-    for (;;)
-    {
-        spProxy->Activate();
-    }
-
+    //for (;;)
+    //{
+    //    spProxy->Activate();
+    //}
+    DWORD dwScriptId;
+    xzero::KG_LuaScriptV51 *pLuaScript = ::new xzero::KG_LuaScriptV51();
+    pLuaScript->Init();
+    pLuaScript->LoadFromFile("D:/workspace/lua/a.lua", &dwScriptId);
     return 0;
 }
