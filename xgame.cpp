@@ -126,7 +126,7 @@ int main()
     DWORD dwScriptId;
     xzero::KG_LuaScriptV51 *pLuaScript = ::new xzero::KG_LuaScriptV51();
     pLuaScript->Init();
-    pLuaScript->LoadFromFile("D:/workspace/lua/a.lua", &dwScriptId);
+    pLuaScript->LoadFromFile("D:/workspace/lua/c.lua", &dwScriptId);
     pLuaScript->DumpStrt();
 
     ::system("PAUSE");
