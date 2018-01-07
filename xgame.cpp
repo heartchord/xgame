@@ -115,20 +115,24 @@ int f()
 
 int main()
 {
-    //xnet::KG_MultiClientServerProxy *pProxy = ::new xnet::KG_MultiClientServerProxy;
-    //pProxy->Init("", 8888);
-    //xnet::SPIKG_ServerProxy spProxy = xnet::SPIKG_ServerProxy(pProxy);
+    xzero::KG_GlobalMemLeakDetect d;
 
-    //for (;;)
-    //{
-    //    spProxy->Activate();
-    //}
-    DWORD dwScriptId;
-    xzero::KG_LuaScriptV51 *pLuaScript = ::new xzero::KG_LuaScriptV51();
-    pLuaScript->Init();
-    pLuaScript->LoadFromFile("D:/workspace/lua/c.lua", &dwScriptId);
-    pLuaScript->DumpStrt();
+    xnet::KG_EventModelServerProxy *pProxy = ::new xnet::KG_EventModelServerProxy;
+    pProxy->Init("", 8888);
+    xnet::SPIKG_ServerProxy spProxy = xnet::SPIKG_ServerProxy(pProxy);
 
+    for (;;)
+    {
+        spProxy->Activate();
+        xzero::KG_MilliSleep(1);
+    }
+    //DWORD dwScriptId;
+    //xzero::KG_LuaScriptV51 *pLuaScript = ::new xzero::KG_LuaScriptV51();
+    //pLuaScript->Init();
+    //pLuaScript->LoadFromFile("D:/workspace/lua/c.lua", &dwScriptId);
+    //pLuaScript->DumpStrt();
+
+    int *p = new int;
     ::system("PAUSE");
     return 0;
 }
