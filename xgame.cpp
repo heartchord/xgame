@@ -124,7 +124,7 @@ int main()
     for (;;)
     {
         spProxy->Activate();
-        xzero::KG_MilliSleep(1);
+        xzero::KG_MilliSleep(55);
     }
     //DWORD dwScriptId;
     //xzero::KG_LuaScriptV51 *pLuaScript = ::new xzero::KG_LuaScriptV51();
